@@ -12,10 +12,12 @@ namespace MVCmovie.Models
         [Required]
         public string Title { get; set; }
         [Display(Name = "Release Date")]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+       // [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+       [DataType(DataType.Date)]
         public DateTime ReleaseDate { get; set; }
         public string Genre { get; set; }
         [Required]
+        [DataType(DataType.Currency)]
         public Decimal Price { get; set; }
 
     }
